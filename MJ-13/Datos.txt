@@ -17,3 +17,29 @@ Nombre de quien imparte la Palabra{
 }
 Numero de Participantes
 Observaciones
+
+
+TABLAS:
+Lideres
+Predicadores
+Miembros
+Actividades
+Tareas
+
+Lideres		Predicadores	Miembros	Actividades	Tareas	Programas
+ID		ID		ID		ID		ID	ID
+Nombre		Nombre		Nombre		No		Tarea	Programa
+Telefono	Telefono	Telefono	Fecha		Enc(Ldr)Enc(Ldr)
+Email		Email		Email		Medio		FInicio	Descripcion
+		Tipo (L o V)	Activo		Nombre(Act)	FFinal	Observaciones
+						Dirige(Ldr)
+						{Actividad
+						 Dirige(Ldr)}
+						{Predicador
+						 TipoP}
+						{Tema
+						 CitaBase}
+						NoParticipantes
+						Tipo(Prg)
+						Realizada
+						Observaciones
