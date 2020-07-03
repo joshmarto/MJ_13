@@ -1,0 +1,19 @@
+No
+Fecha de reunion
+Medio por el cual se realizo
+Nombre de la reunion
+Dirige la reunion
+Actividad Ludica{
+	- Actividad (Juegos, cantos, etc.)
+	- Dirige
+}
+Nombre del Tema para el Grupo{
+	_ Tema
+	- Pasaje Bíblico base
+}
+Nombre de quien imparte la Palabra{
+	- Local (nombre)
+	- Invitado (nombre)
+}
+Numero de Participantes
+Observaciones
