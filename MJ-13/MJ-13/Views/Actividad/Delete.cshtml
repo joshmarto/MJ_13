@@ -1,0 +1,144 @@
+﻿@model MJ_13.Models.Actividades
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Actividades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Leader.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leader.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lider.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lider.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predicador.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programa.Programa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programa.Programa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActividadL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActividadL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PredicadorTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PredicadorTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CitaBase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CitaBase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoParticipantes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoParticipantes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Realizada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Realizada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

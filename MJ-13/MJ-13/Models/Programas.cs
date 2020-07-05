@@ -14,5 +14,6 @@ namespace MJ_13.Models
         public string Observaciones { set; get; }
 
         public virtual Lideres Lider { get; set; }
+        public virtual ICollection<Actividades> Actividades { get; set; }
     }
 }
