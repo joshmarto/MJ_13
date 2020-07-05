@@ -125,11 +125,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Actividades.cs" />
-    <Compile Include="Models\Lideres.cs" />
     <Compile Include="Models\Miembros.cs" />
     <Compile Include="Models\Predicadores.cs" />
     <Compile Include="Models\Programas.cs" />
     <Compile Include="Models\Tareas.cs" />
+    <Compile Include="Models\TipoM.cs" />
+    <Compile Include="Models\TipoP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
