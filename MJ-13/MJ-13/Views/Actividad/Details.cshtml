@@ -1,0 +1,138 @@
+﻿@model MJ_13.Models.Actividades
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Actividades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Leader.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leader.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lider.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lider.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predicador.Origen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.Origen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Programa.Programa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programa.Programa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActividadL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActividadL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PredicadorTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PredicadorTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CitaBase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CitaBase)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoParticipantes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoParticipantes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Realizada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Realizada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

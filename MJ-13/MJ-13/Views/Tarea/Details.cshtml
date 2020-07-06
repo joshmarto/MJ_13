@@ -1,0 +1,50 @@
+﻿@model MJ_13.Models.Tareas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tareas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Lider.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lider.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

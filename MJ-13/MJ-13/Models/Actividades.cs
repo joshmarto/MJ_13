@@ -20,13 +20,13 @@ namespace MJ_13.Models
         public string Tema { set; get; }
         public string CitaBase { set; get; }
         public int NoParticipantes { set; get; }
-        public int ProgramaID { set; get; }
+        //public int ProgramaID { set; get; }
         public bool Realizada { set; get; }
         public string Observaciones { set; get; }
 
         public virtual Lideres Lider { get; set; }
         public virtual Lideres Leader { get; set; }
-        public virtual Programas Programa { get; set; }
+        //public virtual Programas Programa { get; set; }
         public virtual Predicadores Predicador { get; set; }
     }
 }
