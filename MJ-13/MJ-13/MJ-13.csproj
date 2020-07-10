@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,7 +126,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ActividadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LiderController.cs" />
+    <Compile Include="Controllers\LiderVController.cs" />
+    <Compile Include="Controllers\MiembroController.cs" />
+    <Compile Include="Controllers\PredicadorController.cs" />
+    <Compile Include="Controllers\ProgramaController.cs" />
+    <Compile Include="Controllers\TareaController.cs" />
+    <Compile Include="Controllers\TipoPController.cs" />
+    <Compile Include="Data\Contexto.cs" />
+    <Compile Include="Data\Inicializador.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +186,46 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\TipoP\Create.cshtml" />
+    <Content Include="Views\TipoP\Delete.cshtml" />
+    <Content Include="Views\TipoP\Details.cshtml" />
+    <Content Include="Views\TipoP\Edit.cshtml" />
+    <Content Include="Views\TipoP\Index.cshtml" />
+    <Content Include="Views\Miembro\Create.cshtml" />
+    <Content Include="Views\Miembro\Delete.cshtml" />
+    <Content Include="Views\Miembro\Details.cshtml" />
+    <Content Include="Views\Miembro\Edit.cshtml" />
+    <Content Include="Views\Miembro\Index.cshtml" />
+    <Content Include="Views\Lider\Create.cshtml" />
+    <Content Include="Views\Lider\Delete.cshtml" />
+    <Content Include="Views\Lider\Details.cshtml" />
+    <Content Include="Views\Lider\Edit.cshtml" />
+    <Content Include="Views\Lider\Index.cshtml" />
+    <Content Include="Views\LiderV\Create.cshtml" />
+    <Content Include="Views\LiderV\Delete.cshtml" />
+    <Content Include="Views\LiderV\Details.cshtml" />
+    <Content Include="Views\LiderV\Edit.cshtml" />
+    <Content Include="Views\LiderV\Index.cshtml" />
+    <Content Include="Views\Predicador\Create.cshtml" />
+    <Content Include="Views\Predicador\Delete.cshtml" />
+    <Content Include="Views\Predicador\Details.cshtml" />
+    <Content Include="Views\Predicador\Edit.cshtml" />
+    <Content Include="Views\Predicador\Index.cshtml" />
+    <Content Include="Views\Programa\Create.cshtml" />
+    <Content Include="Views\Programa\Delete.cshtml" />
+    <Content Include="Views\Programa\Details.cshtml" />
+    <Content Include="Views\Programa\Edit.cshtml" />
+    <Content Include="Views\Programa\Index.cshtml" />
+    <Content Include="Views\Tarea\Create.cshtml" />
+    <Content Include="Views\Tarea\Delete.cshtml" />
+    <Content Include="Views\Tarea\Details.cshtml" />
+    <Content Include="Views\Tarea\Edit.cshtml" />
+    <Content Include="Views\Tarea\Index.cshtml" />
+    <Content Include="Views\Actividad\Create.cshtml" />
+    <Content Include="Views\Actividad\Delete.cshtml" />
+    <Content Include="Views\Actividad\Details.cshtml" />
+    <Content Include="Views\Actividad\Edit.cshtml" />
+    <Content Include="Views\Actividad\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
