@@ -12,5 +12,7 @@ namespace MJ_13.Models
         public string Telefono { set; get; }
         public string Email { set; get; }
         public bool Activo { set; get; }
+
+        public virtual ICollection<Actividades> Actividades { get; set; }
     }
 }

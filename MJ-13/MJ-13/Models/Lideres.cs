@@ -14,6 +14,5 @@ namespace MJ_13.Models
 
         public virtual ICollection<Actividades> Actividades { get; set; }
         public virtual ICollection<Tareas> Tareas { get; set; }
-        public virtual ICollection<Programas> Programas { get; set; }
     }
 }
