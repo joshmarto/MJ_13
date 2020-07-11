@@ -1,10 +1,10 @@
 ﻿@model MJ_13.Models.Lideres
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Info";
 }
 
-<h2>Details</h2>
+<h2>Info</h2>
 
 <div>
     <h4>Lideres</h4>
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
 </p>

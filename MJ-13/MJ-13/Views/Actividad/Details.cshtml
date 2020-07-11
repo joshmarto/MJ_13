@@ -1,47 +1,15 @@
 ﻿@model MJ_13.Models.Actividades
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Info";
 }
 
-<h2>Details</h2>
+<h2>Informacion</h2>
 
 <div>
     <h4>Actividades</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Leader.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Leader.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Lider.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Lider.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Predicador.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Predicador.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Programa.Programa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Programa.Programa)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Numero)
         </dt>
@@ -75,11 +43,35 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Lider.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lider.Nombre)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.ActividadL)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ActividadL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Leader.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leader.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Predicador.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.Nombre)
         </dd>
 
         <dt>
@@ -107,6 +99,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Programa.Programa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programa.Programa)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Realizada)
         </dt>
 
@@ -125,6 +125,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
 </p>

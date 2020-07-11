@@ -1,48 +1,16 @@
 ﻿@model MJ_13.Models.Actividades
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
 }
 
-<h2>Delete</h2>
+<h2>Eliminar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Esta seguro de querer eliminar este registro?</h3>
 <div>
     <h4>Actividades</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Leader.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Leader.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Lider.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Lider.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Predicador.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Predicador.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Programa.Programa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Programa.Programa)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Numero)
         </dt>
@@ -76,11 +44,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ActividadL)
+            Encargado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lider.Nombre)
+        </dd>
+
+        <dt>
+            Actividad Ludica
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ActividadL)
+        </dd>
+
+        <dt>
+            Dirige
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Leader.Nombre)
+        </dd>
+
+        <dt>
+            Predicador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.Nombre)
         </dd>
 
         <dt>
@@ -108,6 +100,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Programa.Programa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Programa.Programa)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Realizada)
         </dt>
 
@@ -129,8 +129,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
         </div>
     }
 </div>

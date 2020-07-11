@@ -8,8 +8,11 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style>
-        body{
-            background-color: aquamarine;
+        h1, h2, h3, h4{
+            color: #703e8f;
+        }
+        p, th, td{
+            color: #141e4d;
         }
     </style>
 </head>
@@ -29,6 +32,13 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+
+                    <li>@Html.ActionLink("Miembros", "Index", "Miembro")</li>
+                    <li>@Html.ActionLink("Lideres", "Index", "Lider")</li>
+                    <li>@Html.ActionLink("Predicadores", "Index", "Predicador")</li>
+                    <li>@Html.ActionLink("Programas", "Index", "Programa")</li>
+                    <li>@Html.ActionLink("Tareas", "Index", "Tarea")</li>
+                    <li>@Html.ActionLink("Actividades", "Index", "Actividad")</li>
                 </ul>
             </div>
         </div>

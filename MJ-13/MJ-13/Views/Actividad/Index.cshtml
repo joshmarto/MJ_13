@@ -1,28 +1,16 @@
 ﻿@model IEnumerable<MJ_13.Models.Actividades>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Actividades";
 }
 
-<h2>Index</h2>
+<h2>Actividades</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nueva", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Leader.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Lider.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Predicador.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Programa.Programa)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Numero)
         </th>
@@ -36,7 +24,19 @@
             @Html.DisplayNameFor(model => model.Actividad)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ActividadL)
+            Encargado
+        </th>
+        <th>
+            Actividad Ludica
+        </th>
+        <th>
+            Dirige
+        </th>
+        <th>
+            Predicador
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Predicador.Tipo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Tema)
@@ -48,6 +48,9 @@
             @Html.DisplayNameFor(model => model.NoParticipantes)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Programa.Programa)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Realizada)
         </th>
         <th>
@@ -57,55 +60,58 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Leader.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lider.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Predicador.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Programa.Programa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Numero)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Fecha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Medio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Actividad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ActividadL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tema)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CitaBase)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NoParticipantes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Realizada)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Observaciones)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Numero)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fecha)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Medio)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Actividad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Lider.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ActividadL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Leader.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Predicador.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Predicador.Tipo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tema)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CitaBase)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NoParticipantes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Programa.Programa)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Realizada)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Observaciones)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Info", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+    </td>
+</tr>
 }
 
 </table>
