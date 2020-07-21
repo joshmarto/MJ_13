@@ -43,11 +43,11 @@ namespace MJ_13.Controllers
         }
 
         // POST: Miembro/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Nombre,Telefono,Email,Activo")] Miembros miembros)
+        public ActionResult Create([Bind(Include = "ID,Nombre,Nickname,Telefono,Email,Activo")] Miembros miembros)
         {
             if (ModelState.IsValid)
             {
@@ -75,11 +75,11 @@ namespace MJ_13.Controllers
         }
 
         // POST: Miembro/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nombre,Telefono,Email,Activo")] Miembros miembros)
+        public ActionResult Edit([Bind(Include = "ID,Nombre,Nickname,Telefono,Email,Activo")] Miembros miembros)
         {
             if (ModelState.IsValid)
             {

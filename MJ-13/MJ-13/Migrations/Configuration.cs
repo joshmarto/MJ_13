@@ -9,8 +9,7 @@ namespace MJ_13.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "MJ_13.Data.Contexto";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MJ_13.Data.Contexto context)

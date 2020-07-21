@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MJ_13.Models.Programas>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Programas";
 }
 
 <h2>Programas</h2>
 
 <p>
-    @Html.ActionLink("Crear nuevo", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -27,25 +27,25 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Programa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lider.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Observaciones)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
-            @Html.ActionLink("Info", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Programa)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Lider.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Descripcion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Observaciones)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Info", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })
+    </td>
+</tr>
 }
 
 </table>

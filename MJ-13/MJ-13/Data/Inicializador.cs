@@ -45,6 +45,15 @@ namespace MJ_13.Data
             tipos.ForEach(s => context.TipoPs.Add(s));
             context.SaveChanges();
 
+            var clasificaciones = new List<Clasificaciones>
+            {
+                new Clasificaciones{Clasificacion="Predicador"},
+                new Clasificaciones{Clasificacion="Maestro"},
+            };
+
+            clasificaciones.ForEach(s => context.Clasificaciones.Add(s));
+            context.SaveChanges();
+
         }
     }
 }

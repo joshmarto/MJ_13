@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{79FA3E49-EF37-453F-815B-50FD405D5C98}</ProjectGuid>
+    <ProjectGuid>{3B511615-D4C5-4499-8736-D20D4866889B}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -18,7 +18,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44326</IISExpressSSLPort>
+    <IISExpressSSLPort>44389</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -127,9 +127,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActividadController.cs" />
+    <Compile Include="Controllers\ClasificacionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LiderController.cs" />
-    <Compile Include="Controllers\LiderVController.cs" />
+    <Compile Include="Controllers\LideresVController.cs" />
     <Compile Include="Controllers\MiembroController.cs" />
     <Compile Include="Controllers\PredicadorController.cs" />
     <Compile Include="Controllers\ProgramaController.cs" />
@@ -140,12 +141,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007101627153_InitialCreate.cs" />
-    <Compile Include="Migrations\202007101627153_InitialCreate.Designer.cs">
-      <DependentUpon>202007101627153_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202007202203587_Setup.cs" />
+    <Compile Include="Migrations\202007202203587_Setup.Designer.cs">
+      <DependentUpon>202007202203587_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Actividades.cs" />
+    <Compile Include="Models\Clasificaciones.cs" />
     <Compile Include="Models\Lideres.cs" />
     <Compile Include="Models\LideresV.cs" />
     <Compile Include="Models\Miembros.cs" />
@@ -196,36 +198,41 @@
     <Content Include="Views\TipoP\Details.cshtml" />
     <Content Include="Views\TipoP\Edit.cshtml" />
     <Content Include="Views\TipoP\Index.cshtml" />
+    <Content Include="Views\Clasificacion\Create.cshtml" />
+    <Content Include="Views\Clasificacion\Delete.cshtml" />
+    <Content Include="Views\Clasificacion\Details.cshtml" />
+    <Content Include="Views\Clasificacion\Edit.cshtml" />
+    <Content Include="Views\Clasificacion\Index.cshtml" />
     <Content Include="Views\Miembro\Create.cshtml" />
     <Content Include="Views\Miembro\Delete.cshtml" />
     <Content Include="Views\Miembro\Details.cshtml" />
     <Content Include="Views\Miembro\Edit.cshtml" />
     <Content Include="Views\Miembro\Index.cshtml" />
+    <Content Include="Views\LideresV\Create.cshtml" />
+    <Content Include="Views\LideresV\Delete.cshtml" />
+    <Content Include="Views\LideresV\Details.cshtml" />
+    <Content Include="Views\LideresV\Edit.cshtml" />
+    <Content Include="Views\LideresV\Index.cshtml" />
     <Content Include="Views\Lider\Create.cshtml" />
     <Content Include="Views\Lider\Delete.cshtml" />
     <Content Include="Views\Lider\Details.cshtml" />
     <Content Include="Views\Lider\Edit.cshtml" />
     <Content Include="Views\Lider\Index.cshtml" />
-    <Content Include="Views\LiderV\Create.cshtml" />
-    <Content Include="Views\LiderV\Delete.cshtml" />
-    <Content Include="Views\LiderV\Details.cshtml" />
-    <Content Include="Views\LiderV\Edit.cshtml" />
-    <Content Include="Views\LiderV\Index.cshtml" />
-    <Content Include="Views\Predicador\Create.cshtml" />
-    <Content Include="Views\Predicador\Delete.cshtml" />
-    <Content Include="Views\Predicador\Details.cshtml" />
-    <Content Include="Views\Predicador\Edit.cshtml" />
-    <Content Include="Views\Predicador\Index.cshtml" />
-    <Content Include="Views\Programa\Create.cshtml" />
-    <Content Include="Views\Programa\Delete.cshtml" />
-    <Content Include="Views\Programa\Details.cshtml" />
-    <Content Include="Views\Programa\Edit.cshtml" />
-    <Content Include="Views\Programa\Index.cshtml" />
     <Content Include="Views\Tarea\Create.cshtml" />
     <Content Include="Views\Tarea\Delete.cshtml" />
     <Content Include="Views\Tarea\Details.cshtml" />
     <Content Include="Views\Tarea\Edit.cshtml" />
     <Content Include="Views\Tarea\Index.cshtml" />
+    <Content Include="Views\Programa\Create.cshtml" />
+    <Content Include="Views\Programa\Delete.cshtml" />
+    <Content Include="Views\Programa\Details.cshtml" />
+    <Content Include="Views\Programa\Edit.cshtml" />
+    <Content Include="Views\Programa\Index.cshtml" />
+    <Content Include="Views\Predicador\Create.cshtml" />
+    <Content Include="Views\Predicador\Delete.cshtml" />
+    <Content Include="Views\Predicador\Details.cshtml" />
+    <Content Include="Views\Predicador\Edit.cshtml" />
+    <Content Include="Views\Predicador\Index.cshtml" />
     <Content Include="Views\Actividad\Create.cshtml" />
     <Content Include="Views\Actividad\Delete.cshtml" />
     <Content Include="Views\Actividad\Details.cshtml" />
@@ -249,8 +256,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007101627153_InitialCreate.resx">
-      <DependentUpon>202007101627153_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007202203587_Setup.resx">
+      <DependentUpon>202007202203587_Setup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -269,9 +276,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64646</DevelopmentServerPort>
+          <DevelopmentServerPort>62356</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44326/</IISUrl>
+          <IISUrl>https://localhost:44389/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -283,7 +290,7 @@
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>

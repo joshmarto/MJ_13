@@ -1,10 +1,10 @@
 ﻿@model MJ_13.Models.Programas
 
 @{
-    ViewBag.Title = "Info";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Info</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>Programas</h4>
@@ -46,5 +46,5 @@
 </div>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Regresar a la lista", "Index")
+    @Html.ActionLink("Regresar", "Index")
 </p>

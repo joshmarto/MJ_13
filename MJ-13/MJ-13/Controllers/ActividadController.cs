@@ -48,8 +48,8 @@ namespace MJ_13.Controllers
         }
 
         // POST: Actividad/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Numero,Fecha,Medio,Actividad,LiderID,ActividadL,LeaderID,PredicadorID,Tema,CitaBase,NoParticipantes,ProgramaID,Realizada,Observaciones")] Actividades actividades)
@@ -88,8 +88,8 @@ namespace MJ_13.Controllers
         }
 
         // POST: Actividad/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Numero,Fecha,Medio,Actividad,LiderID,ActividadL,LeaderID,PredicadorID,Tema,CitaBase,NoParticipantes,ProgramaID,Realizada,Observaciones")] Actividades actividades)

@@ -1,10 +1,10 @@
 ﻿@model MJ_13.Models.Actividades
 
 @{
-    ViewBag.Title = "Info";
+    ViewBag.Title = "Detalles";
 }
 
-<h2>Informacion</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>Actividades</h4>
@@ -43,7 +43,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Lider.Nombre)
+            Encargado
         </dt>
 
         <dd>
@@ -59,7 +59,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Leader.Nombre)
+            Dirige
         </dt>
 
         <dd>
@@ -67,11 +67,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Predicador.Nombre)
+            Predicador
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Predicador.Nombre)
+        </dd>
+
+        <dt>
+            Tipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.Tipo)
         </dd>
 
         <dt>
@@ -126,5 +134,5 @@
 </div>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Regresar a la lista", "Index")
+    @Html.ActionLink("Regresar", "Index")
 </p>

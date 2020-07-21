@@ -18,7 +18,7 @@ namespace MJ_13.Controllers
         // GET: Predicador
         public ActionResult Index()
         {
-            var predicadores = db.Predicadores.Include(p => p.Tipo);
+            var predicadores = db.Predicadores.Include(p => p.Clasificacion).Include(p => p.Tipo);
             return View(predicadores.ToList());
         }
 
@@ -40,16 +40,17 @@ namespace MJ_13.Controllers
         // GET: Predicador/Create
         public ActionResult Create()
         {
+            ViewBag.ClasificacionID = new SelectList(db.Clasificaciones, "ID", "Clasificacion");
             ViewBag.TipoID = new SelectList(db.TipoPs, "ID", "Tipo");
             return View();
         }
 
         // POST: Predicador/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Nombre,Telefono,Email,TipoID,Localidad")] Predicadores predicadores)
+        public ActionResult Create([Bind(Include = "ID,Nombre,Telefono,Email,TipoID,ClasificacionID,Localidad")] Predicadores predicadores)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +59,7 @@ namespace MJ_13.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ClasificacionID = new SelectList(db.Clasificaciones, "ID", "Clasificacion", predicadores.ClasificacionID);
             ViewBag.TipoID = new SelectList(db.TipoPs, "ID", "Tipo", predicadores.TipoID);
             return View(predicadores);
         }
@@ -74,16 +76,17 @@ namespace MJ_13.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ClasificacionID = new SelectList(db.Clasificaciones, "ID", "Clasificacion", predicadores.ClasificacionID);
             ViewBag.TipoID = new SelectList(db.TipoPs, "ID", "Tipo", predicadores.TipoID);
             return View(predicadores);
         }
 
         // POST: Predicador/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nombre,Telefono,Email,TipoID,Localidad")] Predicadores predicadores)
+        public ActionResult Edit([Bind(Include = "ID,Nombre,Telefono,Email,TipoID,ClasificacionID,Localidad")] Predicadores predicadores)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +94,7 @@ namespace MJ_13.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ClasificacionID = new SelectList(db.Clasificaciones, "ID", "Clasificacion", predicadores.ClasificacionID);
             ViewBag.TipoID = new SelectList(db.TipoPs, "ID", "Tipo", predicadores.TipoID);
             return View(predicadores);
         }

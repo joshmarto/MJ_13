@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<MJ_13.Models.Tareas>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tareas";
 }
 
 <h2>Tareas</h2>
 
 <p>
-    @Html.ActionLink("Crear nueva", "Create")
+    @Html.ActionLink("Crear Nueva", "Create")
 </p>
 <table class="table">
     <tr>
@@ -15,32 +15,32 @@
             @Html.DisplayNameFor(model => model.Tarea)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Lider.Nombre)
+            Encargado
         </th>
         <th>
-            Fecha Inicio
+            @Html.DisplayNameFor(model => model.FechaInicio)
         </th>
         <th>
-            Fecha Final
+            @Html.DisplayNameFor(model => model.FechaFinal)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tarea)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lider.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaInicio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaFinal)
-        </td>
-        <td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Tarea)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Lider.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FechaInicio)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FechaFinal)
+    </td>
+    <td>
         @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
         @Html.ActionLink("Info", "Details", new { id = item.ID }) |
         @Html.ActionLink("Eliminar", "Delete", new { id = item.ID })

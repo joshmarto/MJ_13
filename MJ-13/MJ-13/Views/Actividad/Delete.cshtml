@@ -6,7 +6,7 @@
 
 <h2>Eliminar</h2>
 
-<h3>¿Esta seguro de querer eliminar este registro?</h3>
+<h3>¿Estas seguro que querer borrar este registro?</h3>
 <div>
     <h4>Actividades</h4>
     <hr />
@@ -52,7 +52,7 @@
         </dd>
 
         <dt>
-            Actividad Ludica
+            @Html.DisplayNameFor(model => model.ActividadL)
         </dt>
 
         <dd>
@@ -73,6 +73,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Predicador.Nombre)
+        </dd>
+
+        <dt>
+            Tipo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Predicador.Tipo)
         </dd>
 
         <dt>
@@ -130,7 +138,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Eliminar" class="btn btn-default" /> |
-            @Html.ActionLink("Regresar a la lista", "Index")
+            @Html.ActionLink("Regresar", "Index")
         </div>
     }
 </div>
